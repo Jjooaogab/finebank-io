@@ -4,6 +4,7 @@ import "@/app/globals.css";
 import ButtonSidebar from "./components/Buttons";
 import { LayoutGrid } from "lucide-react";
 import ButtonsSidebar from "./Buttons";
+import Sidebar from "./components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,15 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex">
-          <div className="flex flex-col items-center h-screen w-60 bg-zinc-900 text-zinc-200">
-            <div className="mt-8 text-xl">
-              <span className="font-bold">FINE</span>bank
-              <span className="font-bold">.IO</span>
-            </div>
-            <div className="flex flex-col gap-4 mt-4">
-              <ButtonsSidebar />
-            </div>
-          </div>
+          <Sidebar />
           {children}
         </div>
       </body>

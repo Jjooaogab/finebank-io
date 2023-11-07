@@ -50,7 +50,7 @@ export default function FormLogin() {
         const json = await res.data;
         if (res.status !== 200) throw new Error(json);
         console.log(res)
-        router.push('/')
+        router.push('/app/overview')
       })
       .catch(function (err) {
         console.log(err.message);
